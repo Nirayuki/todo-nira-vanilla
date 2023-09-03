@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../assets/bg_gradiant.png");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.drawner{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    background-color: white;
+
+    transition: .3s ease;
+
+    display: none;
+
+    z-index: 999;
+}
+
+.open{
+    animation: open .3s ease;
+    display: block;
+}
+
+.close{
+    animation: close .3s ease;
+}
+
+.content-drawner{
+    width: 100%;
+
+    position: relative;
+
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+.list-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}  
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+
+@keyframes open {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 0;
+        display: block;
+    }
+}
+
+@keyframes close {
+    from {
+        left: 0;
+        display: block;
+    }
+
+    to {
+        left: -300px;
+        display: none;
+    }
+}
+
+.fa-close{
+    position: absolute;
+
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem !important;
+
+    right: 20px;
+    top: 15px;
+
+    cursor: pointer;
+}
+
+.fa-close:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 2rem;
+    
+    padding-bottom: 5px;
+
+    border-bottom: 3px solid #084c6e;
+}
+
+
+.fa-bars{
+    cursor: pointer;
+    color:#084c6e;
+}
+
+.fa-bars:hover{
+    opacity: 0.8;
+}
+
+.card{
+    border: 3px solid #084c6e;
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 1200px;
+    min-height: 70vh;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: auto;
+
+    gap: 20px;
+}
+
+p{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+input{
+    width: 100%;
+    max-width: 700px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 6px;
+}
+
+button{
+    background-color: #084c6e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 20px;
+    width: 120px;
+
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
